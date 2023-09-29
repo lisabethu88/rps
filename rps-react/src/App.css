@@ -1,0 +1,195 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  pointer-events: none;
+}
+
+header {
+  color: white;
+  background-color: #282c34;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+img {
+  height: 250px;
+  width: 250px;
+}
+
+.animate {
+  animation: bounce 1s ease-in-out 3; /* 3 times */
+  animation-duration: 0.5s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust this value for bounce height */
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  padding-top: 100px;
+}
+
+#player-1,
+#player-2 {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  margin: 50px;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 100vw;
+}
+
+#btn-group-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  margin: 25px;
+}
+#btn-group-1 button {
+  width: fit-content;
+}
+
+#btn-group-2 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* button {
+  font-size: 20px;
+  color: white;
+  background-color: #282c34;
+  border-radius: 5px;
+  padding: 10px;
+  
+  border: 2px solid #282c34;
+} */
+
+/* CSS */
+button {
+  border-radius: 15px;
+  width: 200px;
+  margin: 25px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 2px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+button:after {
+  border-radius: 15px;
+  content: "";
+  background-color: #ffffff;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 13px 50px 13px;
+  }
+}
+
+button:disabled {
+  background-color: #00000031;
+  color: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.292);
+  pointer-events: none;
+}
+
+button:disabled:after {
+  background-color: transparent;
+}
+
+#player1-info,
+#player2-info {
+  margin: 25px;
+}
+#buttons,
+#display-round-winner,
+#player1-info,
+#player2-info {
+  display: none;
+}
+#display-round-winner {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  margin: 25px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    /* animation: App-logo-spin infinite 20s linear; */
+  }
+}
+
+.App-header {
+  /* background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
